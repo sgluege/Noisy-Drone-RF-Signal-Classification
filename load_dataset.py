@@ -5,7 +5,6 @@ import torch
 from torch.utils.data import Dataset
 
 dataset_folder = 'dataset/'
-store_data_path = '/data/glue/drones/preprocessed/iq_and_spec/'
 
 
 class DroneSignalsDatasetIQandSpec(Dataset):
@@ -66,8 +65,9 @@ def plot_input_data(spectrogram_2d, iq_2d, title='', figsize=(10,9)):
     axs['iq_im'].set_ylabel('Im', rotation=0)
     
     # add figure title
-    fig.suptitle('Spectrogram')   
-    plt.show()
+    fig.suptitle(plt_title + '\n\nSpectrogram')
+    plt.savefig('sample_input_data.png', dpi=300, bbox_inches='tight')   
+    # plt.show()
 
 
 # read statistics/class count of the dataset
@@ -101,7 +101,10 @@ data_loader = torch.utils.data.DataLoader(
 x_iq, x_spec, labels, snrs, duty_cycle =  next(iter(data_loader))
 x_iq.shape, x_spec.shape, labels.shape, snrs.shape, duty_cycle.shape
 
+# select a sample from the batch
 sample_id = 12
+
+# plot the sample
 act_snr = snrs[sample_id]
 act_duty_cycle = duty_cycle[sample_id]
 act_class = class_names[labels[sample_id]]
@@ -109,6 +112,4 @@ plt_title = 'Class: ' + act_class + ', SNR: ' + str(act_snr.numpy()) + 'dB, Duty
 
 spectrogram_2d = x_spec[sample_id,:,:,:]
 iq_2d = x_iq[sample_id,:,:]
-
 plot_input_data(spectrogram_2d, iq_2d, title=plt_title, figsize=(10,7))
-plt.savefig('sample_input_data.png', dpi=300, bbox_inches='tight')

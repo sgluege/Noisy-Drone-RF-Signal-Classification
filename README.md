@@ -11,4 +11,4 @@ It comes in the form of 3 files:
 
 ## Load and inspect the dataset
 Use the script `load_dataset.py` to load the dataset using a custom torch Dataloader. It also plots a sample of the dataset which should look like this: 
-![sample_input_data.jpg](doc/img/sample_input_data.jpg)
+![sample_input_data.jpg](doc/img/sample_input_data.png)
