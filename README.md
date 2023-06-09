@@ -1,8 +1,8 @@
-# noisy-drone-detection-benchmark
+# Noisy Drone RF Signal Classification Dataset
 Scripts to load and inspect the drone detection benchmark dataset
 
 ## Dataset
-The dataset is available at [kaggle](https://www.kaggle.com/sgluege/noisy-drone-data-benchmark). Download the dataset and place it in a subfolder `dataset/`. 
+The dataset is available at [kaggle](https://www.kaggle.com/datasets/sgluege/noisy-drone-rf-signal-classification). Download the dataset and place it in a subfolder `dataset/`. 
 
 It comes in the form of 3 files:
 - `class_stats.csv`: contains the number of samples per class

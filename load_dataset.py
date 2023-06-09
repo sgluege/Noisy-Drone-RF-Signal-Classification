@@ -5,7 +5,6 @@ from torch.utils.data import Dataset
 
 dataset_folder = 'dataset/'
 
-
 class DroneSignalsDatasetIQandSpec(Dataset):
     """
     Class for custom dataset of drone data comprised of
