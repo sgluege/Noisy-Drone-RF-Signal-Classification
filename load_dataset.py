@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import torch
@@ -99,7 +98,14 @@ data_loader = torch.utils.data.DataLoader(
 
 # get a batch of samples from the data loader
 x_iq, x_spec, labels, snrs, duty_cycle =  next(iter(data_loader))
-x_iq.shape, x_spec.shape, labels.shape, snrs.shape, duty_cycle.shape
+# x_iq.shape, x_spec.shape, labels.shape, snrs.shape, duty_cycle.shape
+print('Loaded a batch of samples from the data loader with batch size', x_iq.shape[0], 'and the following shapes:')
+print('x_iq shape: ', x_iq.shape)
+print('x_spec shape: ', x_spec.shape)
+print('labels shape: ', labels.shape)
+print('snrs shape: ', snrs.shape)
+print('duty_cycle shape: ', duty_cycle.shape)
+
 
 # select a sample from the batch
 sample_id = 12
