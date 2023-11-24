@@ -15,7 +15,7 @@ Use the script `load_dataset.py` to load the dataset using a custom torch Datalo
 
 ## Cite the data
 
-If you find the data useful for your work please cite our related [paper](NCTA_2023_37_CR.pdf).
+If you find the data useful for your work please cite our related [paper](https://www.scitepress.org/Link.aspx?doi=10.5220/0012176800003595)).
 
 Glüge, S.; Nyfeler, M.; Ramagnano, N.; Horn, C. and Schüpbach, C. (2023). Robust Drone Detection and Classification from Radio Frequency Signals Using Convolutional Neural Networks. In Proceedings of the 15th International Joint Conference on Computational Intelligence, ISBN 978-989-758-674-3, ISSN 2184-3236, pages 496-504.
 
